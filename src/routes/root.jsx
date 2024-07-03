@@ -1,16 +1,5 @@
 import {
-    Box,
-    Grid,
-    GridItem,
-    Link as ChakraLink,
     VStack,
-    Button,
-    Drawer,
-    DrawerBody,
-    DrawerOverlay,
-    DrawerCloseButton,
-    DrawerContent,
-    DrawerHeader,
     useDisclosure,
     IconButton,
     Flex,
@@ -21,6 +10,7 @@ import { FaBars } from "react-icons/fa6";
 import NavLink from "../components/navLink";
 import MobileNav from "../components/mobileNav";
 import { navLinks } from "../data";
+import MobileNavDrawer from "../components/mobileNavDrawer";
 
 const Root = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -32,7 +22,7 @@ const Root = () => {
                 <Outlet />
             </Flex>
 
-            <Flex w="100px">
+            <Flex w="100px" hideBelow="md">
                 <VStack hideBelow="lg" gap="6" h="full" justifyContent="center">
                     {navLinks.map((link, index) => (
                         <NavLink key={index} props={link} />
@@ -44,6 +34,7 @@ const Root = () => {
                     ref={btnRef}
                     onClick={onOpen}
                     hideFrom="lg"
+                    hideBelow="md"
                     size="lg"
                     bg="#2b2a2a"
                     color="whitesmoke"
@@ -52,21 +43,7 @@ const Root = () => {
                 />
             </Flex>
 
-            <Drawer
-                isOpen={isOpen}
-                placement="left"
-                onClose={onClose}
-                finalFocusRef={btnRef}
-                size="full"
-            >
-                <DrawerOverlay />
-                <DrawerContent bg="black" color="whitesmoke">
-                    <DrawerCloseButton size top={12} right={16} />
-                    <DrawerBody>
-                        <MobileNav handleClick={onClose} />
-                    </DrawerBody>
-                </DrawerContent>
-            </Drawer>
+            <MobileNavDrawer onClose={onClose} isOpen={isOpen} btnRef={btnRef} />
         </Flex>
     );
 };
