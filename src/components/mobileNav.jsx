@@ -27,7 +27,7 @@ const MobileNav = ({handleClick}) => {
                     textDecoration='none'
                     style={({ isActive }) => {
                         return {
-                            color: isActive ? "#daa520" : "whitesmoke",
+                            color: isActive ? "#ffb400" : "whitesmoke",
                             fontWeight: isActive ? "bold" : "400",
                         };
                     }}

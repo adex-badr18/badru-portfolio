@@ -19,7 +19,7 @@ const Trapezium = () => {
                 left: '0',
                 width: '100%',
                 height: '100%',
-                bg: '#daa520',
+                bg: '#ffb400',
                 clipPath: 'polygon(0% 0%, 50% 0%, 100% 100%, 0% 100%)'
             }}
         />

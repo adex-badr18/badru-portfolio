@@ -74,7 +74,7 @@ const Overview = () => {
                         I'm{" "}
                         <Highlight
                             query={["Badrudeen", "Abdul-hameed"]}
-                            styles={{ color: "#daa520" }}
+                            styles={{ color: "#ffb400" }}
                         >
                             Badrudeen Abdul-hameed
                         </Highlight>

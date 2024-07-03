@@ -14,7 +14,7 @@ const CtaButton = ({ children, icon, ...rest }) => {
                 />
             }
             overflow="hidden"
-            bg='#daa520'
+            bg='#ffb400'
             _hover={{bg: 'yellow.600'}}
             {...rest}
         >

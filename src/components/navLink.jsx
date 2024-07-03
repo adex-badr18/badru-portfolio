@@ -27,7 +27,7 @@ const NavLink = ({ props }) => {
             onMouseLeave={handleMouseLeave}
             style={({ isActive }) => {
                 return {
-                    background: isActive || isHover ? "#daa520" : "#2b2a2a",
+                    background: isActive || isHover ? "#ffb400" : "#2b2a2a",
                 };
             }}
         >
