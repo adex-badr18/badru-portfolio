@@ -10,7 +10,7 @@ const BioData = () => {
         <Flex direction="column" gap={6}>
             <Heading>PERSONAL INFO</Heading>
 
-            <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+            <Grid templateColumns="repeat(2, 1fr)" rowGap={6} columnGap={10}>
                 {bioData.map((data, index) => (
                     <GridItem key={index}>
                         <DataField

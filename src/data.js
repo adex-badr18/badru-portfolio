@@ -36,3 +36,10 @@ export const bioData = [
     {fieldName: 'Relocation', value: 'Available'},
     {fieldName: 'Language', value: 'English'},
 ];
+
+export const aboutStats = [
+    {title: "Years of Experience", value: 2},
+    {title: "Completed Projects", value: 12},
+    {title: "Completed Courses", value: 15},
+    {title: "Satisfied Customers", value: 10},
+];
