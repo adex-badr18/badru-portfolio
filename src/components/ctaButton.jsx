@@ -1,21 +1,33 @@
 import React from "react";
 import { Button, Icon } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const CtaButton = ({ children, icon, ...rest }) => {
+const CtaButton = ({ children, icon, to, ...rest }) => {
     return (
         <Button
-        role="group"
+            as={Link}
+            to={to}
+            role="group"
             rightIcon={
                 <Icon
                     as={icon}
-                    ml="2"
-                    display='none'
+                    ml={1}
+                    display="none"
                     _groupHover={{ display: "block" }}
                 />
             }
             overflow="hidden"
-            bg='#ffb400'
-            _hover={{bg: 'yellow.600'}}
+            bg="#ffb400"
+            px={10}
+            py={6}
+            w={52}
+            textTransform="uppercase"
+            color="white"
+            fontWeight="bold"
+            variant="solid"
+            shadow="md"
+            borderRadius="full"
+            _hover={{ bg: "yellow.500" }}
             {...rest}
         >
             {children}
