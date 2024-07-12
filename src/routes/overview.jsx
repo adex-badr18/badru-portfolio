@@ -8,7 +8,7 @@ import {
     Image,
 } from "@chakra-ui/react";
 import React from "react";
-import Trapezium from "../components/trapezium";
+import Trapezium from "../components/overview/trapezium";
 import CtaButton from "../components/ctaButton";
 import { FaUser } from "react-icons/fa6";
 
@@ -84,7 +84,7 @@ const Overview = () => {
                         w={{ base: "100%", lg: "90%" }}
                         textAlign={{ base: "center", lg: "left" }}
                     >
-                        I'm a Nigerian-based Web Designer & Front‑end Developer
+                        A Nigerian-based Web Designer & Front‑end Developer
                         focused on crafting clean & user‑facing web solutions. I
                         am passionate about building excellent software that
                         improves the lives of those around me.
@@ -92,11 +92,7 @@ const Overview = () => {
 
                     <CtaButton
                         icon={FaUser}
-                        textTransform="uppercase"
-                        color="gray.100"
-                        variant="solid"
-                        p="5"
-                        borderRadius="full"
+                        to="/about"
                     >
                         More About me
                     </CtaButton>
