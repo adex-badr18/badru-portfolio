@@ -7,8 +7,8 @@ const DataField = ({ fieldName, value }) => {
             direction={{ base: "column", sm: "row", lg: "column", xl: "row" }}
             gap={{ base: 0, sm: 2, lg: 0, xl: 2 }}
         >
-            <Text opacity="0.8">{`${fieldName}:`}</Text>
-            <Text fontWeight="semibold">{value}</Text>
+            <Text opacity="0.8" textTransform="capitalize">{`${fieldName}:`}</Text>
+            <Text fontWeight="semibold" textTransform="">{value}</Text>
         </Flex>
     );
 };
