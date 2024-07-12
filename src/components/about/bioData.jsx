@@ -8,7 +8,7 @@ import { bioData } from "../../data";
 const BioData = () => {
     return (
         <Flex direction="column" gap={6}>
-            <Heading>PERSONAL INFO</Heading>
+            <Heading as="h3" fontSize="2xl">PERSONAL INFO</Heading>
 
             <Grid templateColumns="repeat(2, 1fr)" rowGap={6} columnGap={10}>
                 {bioData.map((data, index) => (

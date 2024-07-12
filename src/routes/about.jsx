@@ -12,6 +12,7 @@ import PageTitle from "../components/pageTitle";
 import BioData from "../components/about/bioData";
 import AboutStatsCard from "../components/about/aboutStatsCard";
 import { aboutStats } from "../data";
+import Skills from "../components/about/skills";
 
 const About = () => {
     return (
@@ -37,6 +38,8 @@ const About = () => {
             <Center py={16}>
                 <Divider borderColor="#777" w={96} />
             </Center>
+
+            <Skills />
         </Box>
     );
 };
