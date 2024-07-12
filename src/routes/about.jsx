@@ -6,13 +6,14 @@ import {
     SimpleGrid,
     Divider,
     Center,
-    StackDivider,
 } from "@chakra-ui/react";
 import PageTitle from "../components/pageTitle";
 import BioData from "../components/about/bioData";
 import AboutStatsCard from "../components/about/aboutStatsCard";
 import { aboutStats } from "../data";
 import Skills from "../components/about/skills";
+import CustomDivider from "../components/about/customDivider";
+import ExperienceEducation from "../components/about/experienceEducation";
 
 const About = () => {
     return (
@@ -35,11 +36,11 @@ const About = () => {
                 </SimpleGrid>
             </Flex>
 
-            <Center py={16}>
-                <Divider borderColor="#777" w={96} />
-            </Center>
-
+            <CustomDivider />
             <Skills />
+            <CustomDivider />
+            <ExperienceEducation />
+
         </Box>
     );
 };
