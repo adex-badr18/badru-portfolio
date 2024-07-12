@@ -38,7 +38,7 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
             <Box
                 w="full"
                 position="relative"
-                py={20}
+                py={16}
                 my={0}
                 mx="auto"
                 textAlign="center"
