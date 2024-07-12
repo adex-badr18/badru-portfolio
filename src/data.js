@@ -23,3 +23,16 @@ export const navLinks = [
         icon: FaEnvelopeOpen,
     },
 ];
+
+export const bioData = [
+    {fieldName: 'first name', value: 'Badrudeen'},
+    {fieldName: 'middle name', value: 'Adewumi'},
+    {fieldName: 'last name', value: 'Abdul-hameed'},
+    {fieldName: 'email', value: 'adex.badr18@gmail.com'},
+    {fieldName: 'phone', value: '+2348064844004'},
+    {fieldName: 'location', value: 'Osogbo, Nigeria.'},
+    {fieldName: 'nationality', value: 'Nigerian'},
+    {fieldName: 'freelance', value: 'Available'},
+    {fieldName: 'Relocation', value: 'Available'},
+    {fieldName: 'Language', value: 'English'},
+];
