@@ -131,7 +131,7 @@ export const projectsData = [
     {
         id: 1,
         title: "Hospital Scan Archive System",
-        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. It allows hospital employees to manage patients' scan records with role-based authentication. USERNAME: admin@gmail.com, PASSWORD: Pa$$word-123",
+        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. It allows hospital employees to manage patients' scan records with role-based authentication. \nUSERNAME: admin@gmail.com, PASSWORD: Pa$$word-123",
         previewLink: "https://hsas.vercel.app/",
         image: hsasImage,
     },

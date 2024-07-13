@@ -13,12 +13,14 @@ import {
     ModalBody,
     ModalCloseButton,
     useDisclosure,
-    Button
+    Link,
 } from "@chakra-ui/react";
+import { TbExternalLink } from "react-icons/tb";
 
-const ProjectCard = ({ imgSrc, title }) => {
+const ProjectCard = ({ project }) => {
     const [isHover, setIsHover] = useState(false);
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const { title, desc, previewLink, image } = project;
 
     const showTitle = () => {
         setIsHover(true);
@@ -32,7 +34,6 @@ const ProjectCard = ({ imgSrc, title }) => {
         <>
             <Box
                 borderRadius="md"
-                h="auto"
                 cursor="pointer"
                 onClick={onOpen}
                 onMouseEnter={showTitle}
@@ -53,13 +54,14 @@ const ProjectCard = ({ imgSrc, title }) => {
                             fontWeight="semibold"
                             textColor="white"
                             textTransform="uppercase"
+                            textAlign="center"
                         >
-                            {title}
+                            {project.title}
                         </Heading>
                     </Flex>
                 ) : (
                     <Image
-                        src={imgSrc}
+                        src={image}
                         objectFit="cover"
                         alt={title}
                         borderRadius="md"
@@ -67,20 +69,22 @@ const ProjectCard = ({ imgSrc, title }) => {
                 )}
             </Box>
 
-            <Modal isOpen={isOpen} onClose={onClose} isCentered>
+            <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
                 <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
+                <ModalContent bg="#252525">
+                    <ModalHeader color="#FFB400" fontWeight="bold">{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Text>Project Body Here</Text>
+                        <Flex direction="column" gap={4}>
+                            <Text>{desc}</Text>
+                            <Image src={image} />
+                        </Flex>
                     </ModalBody>
 
-                    <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        <Button variant="ghost">Secondary Action</Button>
+                    <ModalFooter justifyContent="center">
+                        <Link href={previewLink} display="flex" gap={3} justifyContent="center" alignItems="center" bg="#FFB400" _hover={{bg: "yellow.500"}} borderRadius="md" color="white" fontWeight="semibold" p={3}  isExternal>
+                            <TbExternalLink /> Preview
+                        </Link>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
