@@ -7,7 +7,7 @@ const ExperienceEducation = () => {
     return (
         <Flex direction="column" gap={{ base: 6, md: 10 }} px={20}>
             <Heading as="h3" fontSize="2xl" alignSelf="center">
-                EXPERIENCE AND EDUCATION
+                EXPERIENCE & EDUCATION
             </Heading>
 
             <SimpleGrid columns={{ base: 1, md: 2 }} gap={12}>

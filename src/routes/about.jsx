@@ -17,7 +17,7 @@ import ExperienceEducation from "../components/about/experienceEducation";
 
 const About = () => {
     return (
-        <Box w="full" minH="100vh" pb={6}>
+        <Box w="full" minH="100vh" pb={16}>
             <PageTitle bgText="Resume" primaryTitle="About" coloredTitle="Me" />
 
             <Flex direction={{ base: "column", lg: "row" }} px={10} gap={14}>
