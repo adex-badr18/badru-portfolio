@@ -23,7 +23,7 @@ const Root = () => {
             </Flex>
 
             <Flex w="100px" hideBelow="md">
-                <VStack hideBelow="lg" gap="6" h="full" justifyContent="center">
+                <VStack pos="fixed" hideBelow="lg" gap="6" h="full" justifyContent="center">
                     {navLinks.map((link, index) => (
                         <NavLink key={index} props={link} />
                     ))}
