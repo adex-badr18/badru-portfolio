@@ -131,9 +131,11 @@ export const projectsData = [
     {
         id: 1,
         title: "Hospital Scan Archive System",
-        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. It allows hospital employees to manage patients' scan records with role-based authentication. \nUSERNAME: admin@gmail.com, PASSWORD: Pa$$word-123",
+        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. It allows hospital employees to manage patients' scan records with role-based authentication.",
         previewLink: "https://hsas.vercel.app/",
         image: hsasImage,
+        username: "admin@gmail.com",
+        password: "Pa$$word-123"
     },
     {
         id: 2,
@@ -162,13 +164,17 @@ export const projectsData = [
         desc: "This vehicle rental app was developed with React and FireStore. It offers intuitive navigation, smart filters, and secure authentication for host.",
         previewLink: "https://adex-badr18.github.io/go-car-now/",
         image: goCarNowImage,
+        username: "b@b.com",
+        password: "p123"
     },
     {
         id: 6,
         title: "Drivers License Portal",
-        desc: "This app was developed in collaboration with other developers. It features account creation, authentication, driver's license application, license verification among others. USERNAME: emilys, PASSWORD: emilyspass",
+        desc: "This app was developed in collaboration with other developers. It features account creation, authentication, driver's license application, license verification among others.",
         previewLink: "https://shop-master-blush.vercel.app/",
         image: driversLicenseImage,
+        username: "emilys",
+        password: "emilyspass"
     },
     {
         id: 7,
