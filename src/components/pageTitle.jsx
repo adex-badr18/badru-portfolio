@@ -16,7 +16,7 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
 
     return (
         <>
-            <Flex hideFrom="md" justifyContent="space-between" alignItems="center" px={6} py={4} bg="#252525">
+            <Flex hideFrom="md" justifyContent="space-between" alignItems="center" px={6} py={4} mb={{base: 6, md: 8}} bg="#252525">
                 <Title
                     primaryTitle={primaryTitle}
                     coloredTitle={coloredTitle}
