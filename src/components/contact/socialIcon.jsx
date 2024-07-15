@@ -12,7 +12,7 @@ const SocialIcon = ({ linkTo, icon }) => {
             borderRadius="full"
             bg="#2b2a2a"
             color="white"
-            _hover={{bg: "#FFB400"}}
+            _hover={{bg: "#FFB400", color: "#111"}}
             isExternal
         >
             <Icon as={icon} />

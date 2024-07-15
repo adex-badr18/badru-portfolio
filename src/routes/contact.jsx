@@ -165,11 +165,7 @@ const Contact = () => {
                                 onChange={handleFormChange}
                             ></Textarea>
 
-                            <Button type="submit">Send Message</Button>
-
-                            <CtaButton icon={RiSendPlaneFill}>
-                                Send Message
-                            </CtaButton>
+                            <Button type="submit" borderRadius="full" bg="#FFB400" color="#111" _hover={{bg: "yellow.400"}}>Send Message</Button>
                         </Flex>
                     </form>
                 </Box>
