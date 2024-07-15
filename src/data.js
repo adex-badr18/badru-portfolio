@@ -1,6 +1,6 @@
 import { IoHomeSharp } from "react-icons/io5";
-import { FaUser, FaBriefcase, FaEnvelopeOpen } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa6";
+import { FaUser, FaBriefcase, FaEnvelopeOpen, FaPhoneSquareAlt } from "react-icons/fa";
+import { FaGraduationCap, FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa6";
 import quizzicalImage from "./assets/quizzical-img.png";
 import fatogImage from "./assets/fatog-img.png";
 import hsasImage from "./assets/hsas-img.png";
@@ -189,5 +189,38 @@ export const projectsData = [
         desc: "This Website was developed with React and CSS. It features responsiveness, awesome use of gradients, and dark theme.",
         previewLink: "https://adex-badr18.github.io/bank-modern-app/",
         image: bankAppImage,
+    },
+];
+
+export const contactData = [
+    {
+        id: 1,
+        title: "Mail Me",
+        contact: "adex.badr18@gmail.com",
+        icon: FaEnvelopeOpen
+    },
+    {
+        id: 2,
+        title: "Call Me",
+        contact: "+2348064844004",
+        icon: FaPhoneSquareAlt
+    },
+];
+
+export const socialLinks = [
+    {
+        id: 1,
+        icon: FaLinkedinIn,
+        ref: 'https://linkedin.com/in/badruaa'
+    },
+    {
+        id: 2,
+        icon: FaGithub,
+        ref: 'https://github.com/adex-badr18'
+    },
+    {
+        id: 3,
+        icon: FaTwitter,
+        ref: 'https://twitter.com/Fortunate1790'
     },
 ];
