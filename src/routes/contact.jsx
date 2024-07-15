@@ -60,6 +60,12 @@ const Contact = () => {
                 if (response.status === 200) {
                     console.log("SUCCESS!", response.status, response.text);
                     setResponse("ok");
+                    setMailData({
+                        senderName: "",
+                        senderEmail: "",
+                        subject: "",
+                        body: "",
+                    });
                     onOpen();
                     form.current.reset();
                 }
@@ -165,7 +171,15 @@ const Contact = () => {
                                 onChange={handleFormChange}
                             ></Textarea>
 
-                            <Button type="submit" borderRadius="full" bg="#FFB400" color="#111" _hover={{bg: "yellow.400"}}>Send Message</Button>
+                            <Button
+                                type="submit"
+                                borderRadius="full"
+                                bg="#FFB400"
+                                color="#111"
+                                _hover={{ bg: "yellow.400" }}
+                            >
+                                Send Message
+                            </Button>
                         </Flex>
                     </form>
                 </Box>
@@ -209,8 +223,16 @@ const Contact = () => {
                                     bg="#777"
                                 >
                                     <Icon
-                                        as={response === "ok" ? IoCheckmarkDoneCircle : MdError}
-                                        color={response === "ok" ? "#ffb400" : "red.500"}
+                                        as={
+                                            response === "ok"
+                                                ? IoCheckmarkDoneCircle
+                                                : MdError
+                                        }
+                                        color={
+                                            response === "ok"
+                                                ? "#ffb400"
+                                                : "red.500"
+                                        }
                                         fontSize="5xl"
                                     />
                                 </Flex>
@@ -223,7 +245,11 @@ const Contact = () => {
                                     fontWeight="bold"
                                     mb={5}
                                     textAlign="center"
-                                    color={response === "ok" ? "#ffb400" : "red.500"}
+                                    color={
+                                        response === "ok"
+                                            ? "#ffb400"
+                                            : "red.500"
+                                    }
                                 >
                                     {response === "ok"
                                         ? "Message sent successfully!"
