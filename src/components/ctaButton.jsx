@@ -22,12 +22,12 @@ const CtaButton = ({ children, icon, to, ...rest }) => {
             py={6}
             w={52}
             textTransform="uppercase"
-            color="white"
+            color="#111"
             fontWeight="bold"
             variant="solid"
             shadow="md"
             borderRadius="full"
-            _hover={{ bg: "yellow.500" }}
+            _hover={{ bg: "yellow.400" }}
             {...rest}
         >
             {children}

@@ -8,7 +8,9 @@ import { bioData } from "../../data";
 const BioData = () => {
     return (
         <Flex direction="column" gap={6}>
-            <Heading as="h3" fontSize="2xl">PERSONAL INFO</Heading>
+            <Heading as="h3" fontSize="2xl">
+                PERSONAL INFO
+            </Heading>
 
             <Grid templateColumns="repeat(2, 1fr)" rowGap={6} columnGap={10}>
                 {bioData.map((data, index) => (
@@ -21,7 +23,12 @@ const BioData = () => {
                 ))}
             </Grid>
 
-            <CtaButton icon={IoMdDownload} to="/about" mt={4}>
+            <CtaButton
+                icon={IoMdDownload}
+                to="https://drive.google.com/file/d/14bv2LJ2o4gTlhIZqqai246PoZPfXFmoo/view?usp=sharing"
+                mt={4}
+                target="_blank"
+            >
                 Download CV
             </CtaButton>
         </Flex>

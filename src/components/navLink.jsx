@@ -28,10 +28,11 @@ const NavLink = ({ props }) => {
             style={({ isActive }) => {
                 return {
                     background: isActive || isHover ? "#ffb400" : "#2b2a2a",
+                    color: isActive || isHover ? "#111" : "white",
                 };
             }}
         >
-            <Icon as={props.icon} color="whitesmoke" fontSize="18px" />
+            <Icon as={props.icon} fontSize="18px" />
         </ChakraLink>
     );
 };

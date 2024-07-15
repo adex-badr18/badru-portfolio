@@ -52,7 +52,7 @@ const ProjectCard = ({ project }) => {
                             as="h4"
                             fontSize="lg"
                             fontWeight="semibold"
-                            textColor="white"
+                            textColor="#111"
                             textTransform="uppercase"
                             textAlign="center"
                         >
@@ -97,9 +97,9 @@ const ProjectCard = ({ project }) => {
                             justifyContent="center"
                             alignItems="center"
                             bg="#FFB400"
-                            _hover={{ bg: "yellow.500" }}
+                            _hover={{ bg: "yellow.400" }}
                             borderRadius="md"
-                            color="white"
+                            color="#111"
                             fontWeight="semibold"
                             p={3}
                             isExternal

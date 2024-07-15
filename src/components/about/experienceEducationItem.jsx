@@ -21,7 +21,7 @@ const ExperienceEducationItem = ({
         <Flex gap={5}>
             <VStack>
                 <Flex p={4} justifyContent="center" alignItems="center" bg="#FFB400" w="40px" h="40px" borderRadius="full" zIndex="1">
-                    <Icon as={icon} color="white" fontSize="lg" />
+                    <Icon as={icon} color="#111" fontSize="lg" />
                 </Flex>
                 <Divider orientation="vertical" borderColor="#777" mt="-9px" />
             </VStack>
