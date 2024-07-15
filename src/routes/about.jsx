@@ -4,6 +4,7 @@ import {
     Stack,
     Flex,
     SimpleGrid,
+    Image,
     Divider,
     Center,
 } from "@chakra-ui/react";
@@ -21,6 +22,17 @@ const About = () => {
             <PageTitle bgText="Resume" primaryTitle="About" coloredTitle="Me" />
 
             <Flex direction={{ base: "column", lg: "row" }} px={10} gap={14}>
+                <Image
+                    borderRadius="full"
+                    boxSize="200px"
+                    p="2px"
+                    src="/badru-blackbg2.png"
+                    alt="Badrudeen Abdul-hameed"
+                    hideFrom="md"
+                    border="4px"
+                    borderColor="#2f2f2f"
+                    alignSelf="center"
+                />
                 <BioData />
                 <SimpleGrid
                     columns={{ base: 1, md: 2 }}
@@ -40,7 +52,6 @@ const About = () => {
             <Skills />
             <CustomDivider />
             <ExperienceEducation />
-
         </Box>
     );
 };
