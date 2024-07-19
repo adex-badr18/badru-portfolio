@@ -5,7 +5,7 @@ const AboutStatsCard = ({ title, value }) => {
     return (
         <Box
             py={6}
-            px={8}
+            px={{base: 4, md: 8}}
             borderRadius="md"
             border="1px"
             borderColor="#252525"

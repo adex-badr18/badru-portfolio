@@ -5,8 +5,8 @@ import ExperienceEducationItem from "./experienceEducationItem";
 
 const ExperienceEducation = () => {
     return (
-        <Flex direction="column" gap={{ base: 6, md: 10 }} px={20}>
-            <Heading as="h3" fontSize="2xl" alignSelf="center">
+        <Flex direction="column" gap={{ base: 6, md: 10 }} px={{base: 6, md: 20}}>
+            <Heading as="h3" fontSize={{base: "xl", md: "2xl"}} alignSelf="center">
                 EXPERIENCE & EDUCATION
             </Heading>
 

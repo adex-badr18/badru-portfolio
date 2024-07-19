@@ -6,7 +6,7 @@ import { skillsData } from "../../data";
 const Skills = () => {
     return (
         <Flex direction="column" gap={{base: 6, md: 10}} px={10}>
-            <Heading as="h3" fontSize="2xl" alignSelf="center">MY SKILLS</Heading>
+            <Heading as="h3" fontSize={{base: "xl", md: "2xl"}} alignSelf="center">MY SKILLS</Heading>
 
             <SimpleGrid
                 columns={{ base: 2, md: 4 }}

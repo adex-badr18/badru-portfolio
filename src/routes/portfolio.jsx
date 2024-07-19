@@ -7,7 +7,7 @@ import { projectsData } from "../data";
 
 const Portfolio = () => {
     return (
-        <Box w="full" minH="100vh" pb={16}>
+        <Box w="100vw" minH="100vh" pb={16}>
             <PageTitle bgText="Projects" primaryTitle="My" coloredTitle="Portfolio" />
 
             <SimpleGrid columns={{base: 1, sm: 2, md: 3}} gap={{base: 4, md: 6}} px={16}>

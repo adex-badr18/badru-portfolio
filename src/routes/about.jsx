@@ -18,21 +18,10 @@ import ExperienceEducation from "../components/about/experienceEducation";
 
 const About = () => {
     return (
-        <Box w="full" minH="100vh" pb={16}>
+        <Box w="100vw" minH="100vh" pb={16}>
             <PageTitle bgText="Resume" primaryTitle="About" coloredTitle="Me" />
 
-            <Flex direction={{ base: "column", lg: "row" }} px={10} gap={14}>
-                <Image
-                    borderRadius="full"
-                    boxSize="200px"
-                    p="2px"
-                    src="/badru-blackbg2.png"
-                    alt="Badrudeen Abdul-hameed"
-                    hideFrom="md"
-                    border="4px"
-                    borderColor="#2f2f2f"
-                    alignSelf="center"
-                />
+            <Flex direction={{ base: "column", lg: "row" }} px={{base: 6, md: 10}} gap={14}>
                 <BioData />
                 <SimpleGrid
                     columns={{ base: 1, md: 2 }}

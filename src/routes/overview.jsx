@@ -25,6 +25,7 @@ const Overview = () => {
             direction="column"
             flex="1"
             position="relative"
+            w="100vw"
         >
             <IconButton
                 hideFrom="lg"

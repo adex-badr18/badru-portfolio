@@ -35,9 +35,9 @@ export const navLinks = [
 
 export const bioData = [
     { fieldName: "first name", value: "Badrudeen" },
-    { fieldName: "middle name", value: "Adewumi" },
     { fieldName: "last name", value: "Abdul-hameed" },
-    { fieldName: "email", value: "adex.badr18@gmail.com" },
+    { fieldName: "middle name", value: "Adewumi" },
+    { fieldName: "gender", value: "Male" },
     { fieldName: "phone", value: "+2348064844004" },
     { fieldName: "location", value: "Osogbo, Nigeria." },
     { fieldName: "nationality", value: "Nigerian" },

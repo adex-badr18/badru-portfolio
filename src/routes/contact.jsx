@@ -79,7 +79,7 @@ const Contact = () => {
     };
 
     return (
-        <Box w="full" minH="100vh" pb={16}>
+        <Box w="100vw" minH="100vh" pb={16}>
             <PageTitle
                 bgText="Contact"
                 primaryTitle="Get in"
@@ -87,7 +87,7 @@ const Contact = () => {
             />
 
             <Flex direction={{ base: "column", md: "row" }} px={16} gap={10}>
-                <Flex direction="column" w="96" gap={6}>
+                <Flex direction="column" w={{md: "96"}} gap={6}>
                     <Heading as="h3" fontSize="2xl">
                         REACH OUT!
                     </Heading>

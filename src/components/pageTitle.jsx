@@ -24,6 +24,7 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
                 py={4}
                 mb={{ base: 6, md: 8 }}
                 bg="#252525"
+                w="full"
             >
                 <Title
                     primaryTitle={primaryTitle}
@@ -93,7 +94,7 @@ const Title = ({ primaryTitle, coloredTitle, ...rest }) => {
             lineHeight={1.2}
             color="white"
             textTransform="uppercase"
-            m="0"
+            // m="0"
             // textAlign="center"
             display="flex"
             justifyContent="center"
