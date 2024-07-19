@@ -6,13 +6,19 @@ import {
     Box,
     Highlight,
     Image,
+    IconButton,
+    useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef } from "react";
 import Trapezium from "../components/overview/trapezium";
 import CtaButton from "../components/ctaButton";
-import { FaUser } from "react-icons/fa6";
+import { FaUser, FaBars } from "react-icons/fa6";
+import MobileNavDrawer from "../components/mobileNavDrawer";
 
 const Overview = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const btnRef = useRef();
+
     return (
         <Flex
             justifyContent="center"
@@ -20,13 +26,29 @@ const Overview = () => {
             flex="1"
             position="relative"
         >
+            <IconButton
+                hideFrom="lg"
+                position={{ base: "absolute", lg: "relative" }}
+                top={6}
+                right={6}
+                icon={<FaBars />}
+                ref={btnRef}
+                onClick={onOpen}
+                size="lg"
+                bg="#252525"
+                color="whitesmoke"
+                fontSize="3xl"
+                zIndex="dropdown"
+            />
             <Trapezium />
             <Flex
                 direction={{ base: "column", lg: "row" }}
                 alignItems="center"
                 justifyContent={{ base: "" }}
-                my="8"
-                ml="8"
+                my={{ base: 0, lg: 8 }}
+                ml={{ base: 0, lg: 8 }}
+                py={{ base: 8, lg: 0 }}
+                px={{ base: 4, md: 6, lg: 0 }}
                 flex="1"
                 gap="8"
                 zIndex="docked"
@@ -90,14 +112,17 @@ const Overview = () => {
                         improves the lives of those around me.
                     </Text>
 
-                    <CtaButton
-                        icon={FaUser}
-                        to="/about"
-                    >
+                    <CtaButton icon={FaUser} to="/about">
                         More About me
                     </CtaButton>
                 </Stack>
             </Flex>
+
+            <MobileNavDrawer
+                onClose={onClose}
+                isOpen={isOpen}
+                btnRef={btnRef}
+            />
         </Flex>
     );
 };

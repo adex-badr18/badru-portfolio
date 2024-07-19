@@ -1,49 +1,29 @@
-import {
-    VStack,
-    useDisclosure,
-    IconButton,
-    Flex,
-} from "@chakra-ui/react";
-import React, { useRef } from "react";
-import { Outlet, Link as RouterLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa6";
+import { VStack, Flex } from "@chakra-ui/react";
+import React from "react";
+import { Outlet } from "react-router-dom";
 import NavLink from "../components/navLink";
-import MobileNav from "../components/mobileNav";
 import { navLinks } from "../data";
-import MobileNavDrawer from "../components/mobileNavDrawer";
 
 const Root = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const btnRef = useRef();
-
     return (
-        <Flex flex="1">
-            <Flex flex="1">
+        <Flex flex="1" position="relative">
+            <Flex flex="1" justifyContent="center">
                 <Outlet />
             </Flex>
 
-            <Flex w="100px" hideBelow="md">
-                <VStack pos="fixed" hideBelow="lg" gap="6" h="full" justifyContent="center">
+            <Flex w={{base: 0, lg: "100px"}}>
+                <VStack
+                    pos="fixed"
+                    hideBelow="lg"
+                    gap="6"
+                    h="full"
+                    justifyContent="center"
+                >
                     {navLinks.map((link, index) => (
                         <NavLink key={index} props={link} />
                     ))}
                 </VStack>
-
-                <IconButton
-                    icon={<FaBars />}
-                    ref={btnRef}
-                    onClick={onOpen}
-                    hideFrom="lg"
-                    hideBelow="md"
-                    size="lg"
-                    bg="#2b2a2a"
-                    color="whitesmoke"
-                    fontSize="26px"
-                    mt="8"
-                />
             </Flex>
-
-            <MobileNavDrawer onClose={onClose} isOpen={isOpen} btnRef={btnRef} />
         </Flex>
     );
 };

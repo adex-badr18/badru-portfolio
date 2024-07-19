@@ -20,7 +20,7 @@ const MobileNavDrawer = ({isOpen, onClose, btnRef}) => {
         >
             <DrawerOverlay />
             <DrawerContent bg="black" color="whitesmoke">
-                <DrawerCloseButton size top={{base: 8, md: 12}} right={{base: 10, md: 16}} />
+                <DrawerCloseButton size top={{base: 8, md: 12}} right={{base: 10, md: 16}} zIndex="sticky" />
                 <DrawerBody>
                     <MobileNav handleClick={onClose} />
                 </DrawerBody>

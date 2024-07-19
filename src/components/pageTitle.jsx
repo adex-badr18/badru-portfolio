@@ -16,7 +16,15 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
 
     return (
         <>
-            <Flex hideFrom="md" justifyContent="space-between" alignItems="center" px={6} py={4} mb={{base: 6, md: 8}} bg="#252525">
+            <Flex
+                hideFrom="md"
+                justifyContent="space-between"
+                alignItems="center"
+                px={6}
+                py={4}
+                mb={{ base: 6, md: 8 }}
+                bg="#252525"
+            >
                 <Title
                     primaryTitle={primaryTitle}
                     coloredTitle={coloredTitle}
@@ -32,6 +40,13 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
                     bg="#252525"
                     color="whitesmoke"
                     fontSize="26px"
+                />
+
+                {/* Mobile Nav Side Menu */}
+                <MobileNavDrawer
+                    onClose={onClose}
+                    isOpen={isOpen}
+                    btnRef={btnRef}
                 />
             </Flex>
 
@@ -66,13 +81,6 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
                     {bgText}
                 </Heading>
             </Box>
-
-            {/* Mobile Nav Side Menu */}
-            <MobileNavDrawer
-                onClose={onClose}
-                isOpen={isOpen}
-                btnRef={btnRef}
-            />
         </>
     );
 };
