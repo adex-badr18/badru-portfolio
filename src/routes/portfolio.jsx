@@ -1,5 +1,12 @@
-import React, {useRef} from "react";
-import { Box, SimpleGrid, IconButton, useDisclosure } from "@chakra-ui/react";
+import React, { useRef } from "react";
+import {
+    Box,
+    SimpleGrid,
+    Flex,
+    IconButton,
+    Heading,
+    useDisclosure,
+} from "@chakra-ui/react";
 import PageTitle from "../components/pageTitle";
 import ProjectCard from "../components/portfolio/projectCard";
 import MobileNavDrawer from "../components/mobileNavDrawer";
@@ -11,8 +18,12 @@ const Portfolio = () => {
     const btnRef = useRef();
 
     return (
-        <Box w={{base: "100vw", lg: "92vw"}} minH="100vh" pb={16}>
-            <PageTitle bgText="Projects" primaryTitle="My" coloredTitle="Portfolio" />
+        <Box w={{ base: "100vw", lg: "92vw" }} minH="100vh" pb={16}>
+            <PageTitle
+                bgText="Projects"
+                primaryTitle="My"
+                coloredTitle="Portfolio"
+            />
 
             <IconButton
                 hideFrom="lg"
@@ -30,13 +41,28 @@ const Portfolio = () => {
                 zIndex="dropdown"
             />
 
-            <SimpleGrid columns={{base: 1, sm: 2, md: 3}} gap={{base: 4, md: 6}} px={{base: 8, md: 16}} pt={{base: 32, md: 0}}>
-                {
-                    projectsData.map(project => (
+            <Flex
+                direction="column"
+                gap={10}
+                px={{ base: 8, md: 16 }}
+                pt={{ base: 32, md: 0 }}
+            >
+                <Heading
+                    as="h3"
+                    fontSize={{ base: "xl", md: "2xl" }}
+                    textAlign={{ base: "center", md: "left" }}
+                >
+                    PROJECTS
+                </Heading>
+                <SimpleGrid
+                    columns={{ base: 1, sm: 2, md: 3 }}
+                    gap={{ base: 4, md: 6 }}
+                >
+                    {projectsData.map((project) => (
                         <ProjectCard key={project.id} project={project} />
-                    ))    
-                }
-            </SimpleGrid>
+                    ))}
+                </SimpleGrid>
+            </Flex>
 
             <MobileNavDrawer
                 onClose={onClose}
