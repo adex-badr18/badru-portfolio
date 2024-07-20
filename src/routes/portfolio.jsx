@@ -1,14 +1,34 @@
-import React from "react";
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import React, {useRef} from "react";
+import { Box, SimpleGrid, IconButton, useDisclosure } from "@chakra-ui/react";
 import PageTitle from "../components/pageTitle";
 import ProjectCard from "../components/portfolio/projectCard";
-import quizzicalImg from "../assets/quizzical-img.png";
+import MobileNavDrawer from "../components/mobileNavDrawer";
 import { projectsData } from "../data";
+import { FaBars } from "react-icons/fa6";
 
 const Portfolio = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const btnRef = useRef();
+
     return (
-        <Box w="100vw" minH="100vh" pb={16}>
+        <Box w={{base: "100vw", lg: "92vw"}} minH="100vh" pb={16}>
             <PageTitle bgText="Projects" primaryTitle="My" coloredTitle="Portfolio" />
+
+            <IconButton
+                hideFrom="lg"
+                hideBelow="md"
+                position={{ base: "absolute", lg: "relative" }}
+                top={6}
+                right={6}
+                icon={<FaBars />}
+                ref={btnRef}
+                onClick={onOpen}
+                size="lg"
+                bg="#252525"
+                color="whitesmoke"
+                fontSize="3xl"
+                zIndex="dropdown"
+            />
 
             <SimpleGrid columns={{base: 1, sm: 2, md: 3}} gap={{base: 4, md: 6}} px={16}>
                 {
@@ -17,6 +37,12 @@ const Portfolio = () => {
                     ))    
                 }
             </SimpleGrid>
+
+            <MobileNavDrawer
+                onClose={onClose}
+                isOpen={isOpen}
+                btnRef={btnRef}
+            />
         </Box>
     );
 };

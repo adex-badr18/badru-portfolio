@@ -11,26 +11,27 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
     useDisclosure,
     Icon,
+    IconButton,
 } from "@chakra-ui/react";
-import { RiSendPlaneFill } from "react-icons/ri";
 import PageTitle from "../components/pageTitle";
-import CtaButton from "../components/ctaButton";
+import MobileNavDrawer from "../components/mobileNavDrawer";
 import { contactData, socialLinks } from "../data";
 import ContactInfo from "../components/contact/contactInfo";
 import SocialIcon from "../components/contact/socialIcon";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
+import { FaBars } from "react-icons/fa6";
 import { MdError } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
     const form = useRef();
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const { isOpen: isMenuOpen, onOpen: onMenuOpen, onClose: onMenuClose } = useDisclosure();
+    const btnRef = useRef();
     const [response, setResponse] = useState("");
     const [mailData, setMailData] = useState({
         senderName: "",
@@ -79,15 +80,31 @@ const Contact = () => {
     };
 
     return (
-        <Box w="100vw" minH="100vh" pb={16}>
+        <Box w={{base: "100vw", lg: "92vw"}} minH="100vh" pb={16}>
             <PageTitle
                 bgText="Contact"
                 primaryTitle="Get in"
                 coloredTitle="Touch"
             />
 
+            <IconButton
+                hideFrom="lg"
+                hideBelow="md"
+                position={{ base: "absolute", lg: "relative" }}
+                top={6}
+                right={6}
+                icon={<FaBars />}
+                ref={btnRef}
+                onClick={onMenuOpen}
+                size="lg"
+                bg="#252525"
+                color="whitesmoke"
+                fontSize="3xl"
+                zIndex="dropdown"
+            />
+
             <Flex direction={{ base: "column", md: "row" }} px={16} gap={10}>
-                <Flex direction="column" w={{md: "96"}} gap={6}>
+                <Flex direction="column" w={{ md: "96" }} gap={6}>
                     <Heading as="h3" fontSize="2xl">
                         REACH OUT!
                     </Heading>
@@ -270,6 +287,12 @@ const Contact = () => {
                     </ModalBody>
                 </ModalContent>
             </Modal>
+
+            <MobileNavDrawer
+                onClose={onMenuClose}
+                isOpen={isMenuOpen}
+                btnRef={btnRef}
+            />
         </Box>
     );
 };
