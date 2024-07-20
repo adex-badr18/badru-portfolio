@@ -33,6 +33,8 @@ const Contact = () => {
     const { isOpen: isMenuOpen, onOpen: onMenuOpen, onClose: onMenuClose } = useDisclosure();
     const btnRef = useRef();
     const [response, setResponse] = useState("");
+    const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     const [mailData, setMailData] = useState({
         senderName: "",
         senderEmail: "",
@@ -53,13 +55,20 @@ const Contact = () => {
         }));
     };
 
+    const isFormInvalid = () => {
+        return Boolean(mailData.senderEmail === "" || mailData.body === "");
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
+
+        setIsLoading(true);
 
         emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
             (response) => {
                 if (response.status === 200) {
-                    console.log("SUCCESS!", response.status, response.text);
+                    // console.log("SUCCESS!", response.status, response.text);
+                    setIsLoading(false);
                     setResponse("ok");
                     setMailData({
                         senderName: "",
@@ -193,7 +202,12 @@ const Contact = () => {
                                 borderRadius="full"
                                 bg="#FFB400"
                                 color="#111"
+                                isLoading={isLoading}
+                                loadingText="Sending..."
+                                spinnerPlacement="end"
+                                isDisabled={isFormInvalid()}
                                 _hover={{ bg: "yellow.400" }}
+                                _disabled={{opacity: "0.5", color: "gray.200", cursor: "not-allowed"}}
                             >
                                 Send Message
                             </Button>
