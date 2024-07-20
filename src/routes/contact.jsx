@@ -112,7 +112,7 @@ const Contact = () => {
                 zIndex="dropdown"
             />
 
-            <Flex direction={{ base: "column", md: "row" }} px={16} gap={10}>
+            <Flex direction={{ base: "column", md: "row" }} px={{base: 8, md: 16}} pt={{base: 32, md: 0}} gap={10}>
                 <Flex direction="column" w={{ md: "96" }} gap={6}>
                     <Heading as="h3" fontSize="2xl">
                         REACH OUT!

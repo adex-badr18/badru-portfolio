@@ -25,6 +25,8 @@ const PageTitle = ({ bgText, primaryTitle, coloredTitle }) => {
                 mb={{ base: 6, md: 8 }}
                 bg="#252525"
                 w="full"
+                pos="fixed"
+                zIndex={2}
             >
                 <Title
                     primaryTitle={primaryTitle}

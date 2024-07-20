@@ -40,7 +40,7 @@ const About = () => {
                 zIndex="dropdown"
             />
 
-            <Flex direction={{ base: "column", lg: "row" }} px={{base: 6, md: 10}} gap={14}>
+            <Flex direction={{ base: "column", lg: "row" }} px={{base: 8, md: 16}} pt={{base: 32, md: 0}} gap={14}>
                 <BioData />
                 <SimpleGrid
                     columns={{ base: 1, md: 2 }}

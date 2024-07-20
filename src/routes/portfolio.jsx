@@ -30,7 +30,7 @@ const Portfolio = () => {
                 zIndex="dropdown"
             />
 
-            <SimpleGrid columns={{base: 1, sm: 2, md: 3}} gap={{base: 4, md: 6}} px={16}>
+            <SimpleGrid columns={{base: 1, sm: 2, md: 3}} gap={{base: 4, md: 6}} px={{base: 8, md: 16}} pt={{base: 32, md: 0}}>
                 {
                     projectsData.map(project => (
                         <ProjectCard key={project.id} project={project} />

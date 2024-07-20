@@ -25,7 +25,6 @@ const Overview = () => {
             direction="column"
             flex="1"
             position="relative"
-            w="100vw"
         >
             <IconButton
                 hideFrom="lg"
@@ -49,7 +48,7 @@ const Overview = () => {
                 my={{ base: 0, lg: 8 }}
                 ml={{ base: 0, lg: 8 }}
                 py={{ base: 8, lg: 0 }}
-                px={{ base: 4, md: 6, lg: 0 }}
+                px={{ base: 8, md: 16, lg: 0 }}
                 flex="1"
                 gap="8"
                 zIndex="docked"
