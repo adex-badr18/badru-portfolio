@@ -171,10 +171,10 @@ export const projectsData = [
         id: 6,
         title: "Drivers License Portal",
         desc: "This app was developed in collaboration with other developers. It features account creation, authentication, driver's license application, license verification among others.",
-        previewLink: "https://shop-master-blush.vercel.app/",
+        previewLink: "https://driver-license-portal.vercel.app/",
         image: driversLicenseImage,
-        username: "emilys",
-        password: "emilyspass"
+        username: "toyeeb18@gmail.com",
+        password: "toyeeb1234"
     },
     {
         id: 7,
