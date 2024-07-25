@@ -75,6 +75,7 @@ const Overview = () => {
                     hideFrom="lg"
                     border="4px"
                     borderColor="#2f2f2f"
+                    mt={16}
                 />
 
                 <Stack
