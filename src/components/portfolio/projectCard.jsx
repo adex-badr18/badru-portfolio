@@ -69,7 +69,7 @@ const ProjectCard = ({ project }) => {
                 )}
             </Box>
 
-            <Modal isOpen={isOpen} onClose={onClose} size="xl" scrollBehavior="inside" isCentered>
+            <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
                 <ModalOverlay />
                 <ModalContent bg="#252525">
                     <ModalHeader color="#FFB400" fontWeight="bold">
