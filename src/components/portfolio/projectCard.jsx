@@ -38,8 +38,6 @@ const ProjectCard = ({ project }) => {
                 onClick={onOpen}
                 onMouseEnter={showTitle}
                 onMouseLeave={showImage}
-                onTouchStart={showTitle}
-                onTouchEnd={showImage}
             >
                 {isHover ? (
                     <Flex
