@@ -16,6 +16,7 @@ import { FaBars } from "react-icons/fa6";
 const Portfolio = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
+    console.log(projectsData);
 
     return (
         <Box w={{ base: "100vw", lg: "92vw" }} minH="100vh" pb={16}>

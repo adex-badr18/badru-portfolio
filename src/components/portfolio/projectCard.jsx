@@ -43,6 +43,7 @@ const ProjectCard = ({ project }) => {
                     <Flex
                         w="full"
                         h="full"
+                        minH="186.141px"
                         justifyContent="center"
                         alignItems="center"
                         bg="#FFB400"
