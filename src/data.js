@@ -15,11 +15,13 @@ import quizzicalImage from "./assets/quizzical-img.png";
 import fatogImage from "./assets/fatog-img.png";
 import hsasImage from "./assets/hsas-img.png";
 import grtpImage from "./assets/grtp-img.png";
-import driversLicenseImage from "./assets/drivers-license-img.png";
+import driversLicenseImage from "./assets/drivers-license.png";
 import shopMasterImage from "./assets/shopmaster-img.png";
 import bankAppImage from "./assets/bank-app-img.png";
 import goCarNowImage from "./assets/go-car-now.webp";
-import CampaignImage from "./assets/infinion-campaign.png"
+import CampaignImage from "./assets/infinion-campaign.png";
+import BrightLifeImage from "./assets/brightlife.png";
+import SmartExamPrepImage from "./assets/smart-exam-prep.png";
 
 export const navLinks = [
     {
@@ -74,20 +76,22 @@ export const skillsData = [
     { title: "REACT ROUTER", progressValue: 70 },
     { title: "REDUX", progressValue: 25 },
     { title: "TANSTACK TABLE", progressValue: 60 },
+    { title: "TANSTACK QUERY", progressValue: 60 },
     { title: "CHAKRA UI", progressValue: 90 },
     { title: "TAILWIND CSS", progressValue: 70 },
     { title: "REST API", progressValue: 80 },
     { title: "JASMINE", progressValue: 50 },
     { title: "BACKEND", progressValue: 30 },
+    { title: "SHADCN UI", progressValue: 10 },
 ];
 
 export const eduExpData = [
     {
         icon: FaBriefcase,
-        date: "2024 - PRESENT",
-        title: "Lead Front-end Developer",
-        institution: "ACME Software Lab",
-        desc: "Development of custom-built UI with React. Collaborates with designers and backend teams for seamless integration of designs and APIs.",
+        date: "2023 - PRESENT",
+        title: "Frontend Developer",
+        institution: "The Fronteers Solutions",
+        desc: "Development of user-facing features that determines the structure and design of web pages, with effective collaboration with other developers.",
     },
     {
         icon: FaGraduationCap,
@@ -98,10 +102,10 @@ export const eduExpData = [
     },
     {
         icon: FaBriefcase,
-        date: "2023 - PRESENT",
-        title: "Frontend Developer",
-        institution: "The Fronteers Solutions",
-        desc: "Development of user-facing features that determines the structure and design of web pages, with effective collaboration with other developers.",
+        date: "2024 - 2025",
+        title: "Lead Front-end Developer",
+        institution: "ACME Software Lab",
+        desc: "Development of custom-built UI with React. Collaborates with designers and backend teams for seamless integration of designs and APIs.",
     },
     {
         icon: FaGraduationCap,
@@ -142,15 +146,6 @@ export const eduExpData = [
 
 export const projectsData = [
     {
-        id: 1,
-        title: "Hospital Scan Archive System",
-        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. It allows hospital employees to manage patients' scan records with role-based authentication.",
-        previewLink: "https://hsas.vercel.app/",
-        image: hsasImage,
-        username: "admin@gmail.com",
-        password: "Pa$$word-123",
-    },
-    {
         id: 6,
         title: "Drivers License Portal",
         desc: "This app was developed in collaboration with other developers. It features account creation, authentication, driver's license application, license verification among others.",
@@ -158,6 +153,27 @@ export const projectsData = [
         image: driversLicenseImage,
         username: "toyeeb18@gmail.com",
         password: "toyeeb1234",
+    },
+    {
+        id: 9,
+        title: "Behavioral Health Web App",
+        desc: "This app was developed in collaboration with a backend developer. It automates the onboarding process for clients seeking behavioral health services. It features account creation, authentication, and a dashboard for managing client information.",
+        previewLink: "https://brightlife-enhancement-services.vercel.app/",
+        image: BrightLifeImage,
+    },
+    {
+        id: 9,
+        title: "Smart Exam Prep Web App",
+        desc: "This is an AI-powered web solution that helps students to prepare for national exams. It generates standard practice questions and also allow students to take mock examinations based on their preferences.",
+        previewLink: "https://smart-exam-study-assistant.vercel.app/",
+        image: SmartExamPrepImage,
+    },
+    {
+        id: 1,
+        title: "Campaign Management Portal",
+        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. This app allows users to create, view, update, and delete campaigns. It features robust filtering and pagination with responsive design.",
+        previewLink: "https://campaign-challenge-infinion.vercel.app/",
+        image: CampaignImage,
     },
     {
         id: 2,
@@ -168,10 +184,12 @@ export const projectsData = [
     },
     {
         id: 1,
-        title: "Campaign Management Portal",
-        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. This app allows users to create, view, update, and delete campaigns. It features robust filtering and pagination with responsive design.",
-        previewLink: "https://campaign-challenge-infinion.vercel.app/",
-        image: CampaignImage,
+        title: "Hospital Scan Archive System",
+        desc: "Developed with React, Tailwind CSS, React Router, and Tanstack Table. It allows hospital employees to manage patients' scan records with role-based authentication.",
+        previewLink: "https://hsas.vercel.app/",
+        image: hsasImage,
+        username: "admin@gmail.com",
+        password: "Pa$$word-123",
     },
     {
         id: 7,
@@ -186,7 +204,7 @@ export const projectsData = [
         desc: "This website was crafted with React and CSS. It features responsiveness, outstanding animation, contact section integrated to the email server, and so on.",
         previewLink: "https://grtp.vercel.app/",
         image: grtpImage,
-    },
+    },    
     {
         id: 4,
         title: "Quizzical App",
